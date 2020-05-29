@@ -3,7 +3,7 @@ import solution
 import io
 import builtins
 from contextlib import redirect_stdout
-from unittest.mock import MagicMock
+from unittest.mock import MagicMock, patch
 
 class Testing(unittest.TestCase):
 
@@ -17,9 +17,6 @@ class Testing(unittest.TestCase):
             actual = buf.getvalue().strip() # remove line break from stdout
             self.assertEqual(actual, 'Bob')
 
-    def test_input_name(self):
-        old_input = builtins.input # so we can teardown later
-        builtins.input = MagicMock(return_value='Bob') # setup
-        self.assertEqual(solution.input_name(), 'Bob')
-        builtins.input = old_input # teardown
-
+            
+if __name__ == '__main__':
+    unittest.main()
