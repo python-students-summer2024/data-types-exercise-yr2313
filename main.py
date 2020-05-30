@@ -1,8 +1,7 @@
-import solution
+from solutions import *
 
 def main():
-  solution.return_name()
-  solution.print_name()
-  solution.input_name()
+  #calculate_profit()
+  calculate_quotient_and_remainder()
 
 main()
