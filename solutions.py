@@ -18,7 +18,7 @@ def calculate_quotient_and_remainder():
   Here's an example run of the function: 
     Enter number #1: 5
     Enter number #2: 2
-    "2 goes into 5 a total of 2 times with a remainder of 1"
+    2 goes into 5 a total of 2 times with a remainder of 1
   """
 
 def calculate_miles_per_gallon():
@@ -26,8 +26,11 @@ def calculate_miles_per_gallon():
   A car's Miles Per Gallon (MPG) can be calculated using the following formula: 
     MPG = Miles driven / Gallons of Gas Used
   Complete this function so that it asks the user for the number of miles driven and the gallons of gas used. 
-  It should calculate the car's MPG and display the result in the format:
-    "Miles per gallon: 2.2"
+  It should calculate the car's MPG and display the result in the format indicated in this example run of the program:
+
+    Miles driven: 100
+    Gas used (gallons): 25
+    Miles per gallon: 2.2
   """
 
 def align_text():
