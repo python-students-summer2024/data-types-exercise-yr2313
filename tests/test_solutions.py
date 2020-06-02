@@ -42,5 +42,6 @@ Here are your prices!
 Price #1: $    1.00
 Price #2: $  200.00
 Price #3: $   50.00
-        '''.lower().strip()
+        ''' .lower().strip()
+        ' '.join(expected.split()) # remove multiple whitespaces
         assert captured.out.lower().strip() == expected
