@@ -24,13 +24,13 @@ Helpful video:
 
 ## Modify the code
 
-The file named `solution.py` contains several functions that must be completed in order for the program to work. Each function contains a description of what it should do.
+The file named `solutions.py` contains several functions that must be completed in order for the program to work. Each function contains a description of what it should do.
 
 The only modifications you must make in order to complete this assignment are to these functions in this one file.
 
 ### Run the program
 
-To run the program, run the file named `main.py`. The code in this file makes use those functions you have modified in `solution.py` to produce and output the Mad Lib text.
+To run the program, run the file named `main.py`. The code in this file makes use those functions you have modified in `solutions.py` to produce and output the Mad Lib text.
 
 ### Verify the output is correct
 
