@@ -32,6 +32,8 @@ The only modifications you must make in order to complete this assignment are to
 
 To run the program, run the file named `main.py`. The code in this file makes use those functions you have modified in `solutions.py` to produce and output the text.
 
+A best practice is to focus on one problem at a time. Comment out any lines in the `main.py` program that run parts of the code you are not interested in trying out at the moment.
+
 ### Verify the output is correct
 
 Running the program should ask for the user to input several words (adjectives, nouns, verbs, etc), and then generate and output the text of Lewis Carrol's Jabberwocky with those words inserted in Mad Lib style.
