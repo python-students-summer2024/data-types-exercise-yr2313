@@ -28,8 +28,11 @@ class Tests:
         monkeypatch.setattr("builtins.input", lambda x: input_values.pop(0))
         calculate_miles_per_gallon()
         captured = capsys.readouterr() # capture print output
+        actual = captured.out.lower().strip()
+        actual = ' '.join(actual.split())
         expected = "Miles per gallon: 25.0".lower().strip()
-        assert captured.out.lower().strip() == expected
+        expected = ' '.join(expected.split())
+        assert expected in actual # good enough if the expected text is within the actual printed output
 
     def test_align_text(self, capsys, monkeypatch):
         input_values = ["1", "200", "50"] # the mock values we will use for input
@@ -43,5 +46,7 @@ Price #1: $    1.00
 Price #2: $  200.00
 Price #3: $   50.00
         ''' .lower().strip()
-        ' '.join(expected.split()) # remove multiple whitespaces
+        expected = ' '.join(expected.split()) # remove multiple whitespaces
+        actual = captured.out.lower().strip()
+        actual = ' '.join(expected.split())
         assert captured.out.lower().strip() == expected

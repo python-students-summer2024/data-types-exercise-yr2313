@@ -30,7 +30,7 @@ The only modifications you must make in order to complete this assignment are to
 
 ### Run the program
 
-To run the program, run the file named `main.py`. The code in this file makes use those functions you have modified in `solutions.py` to produce and output the Mad Lib text.
+To run the program, run the file named `main.py`. The code in this file makes use those functions you have modified in `solutions.py` to produce and output the text.
 
 ### Verify the output is correct
 
