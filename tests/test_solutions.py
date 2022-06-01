@@ -49,4 +49,4 @@ Price #3: $   50.00
         expected = ' '.join(expected.split()) # remove multiple whitespaces
         actual = captured.out.lower().strip()
         actual = ' '.join(expected.split())
-        assert captured.out.lower().strip() == expected
+        assert actual == expected
