@@ -4,25 +4,22 @@ class Tests:
 
     def test_calculate_profit(self, capsys, monkeypatch):
         # test with sales of 3000, expecting 690 of profit
-        mock_data = 3000
-        monkeypatch.setattr("builtins.input", lambda x: mock_data)
-        calculate_profit()
-        captured = capsys.readouterr() # capture print output
-        actual = captured.out.lower().strip()
-        expected = "profit: $690.00"
-        assert expected == actual, f'Expected the calculate_profit() function to print "{expected}" when the user input the value, "{mock_data}"; instead, it printed "{actual}".'
-
-        # test with sales of 10000, expecting 2300 of profit
-        mock_data = 10000
-        monkeypatch.setattr("builtins.input", lambda x: mock_data)
-        calculate_profit()
-        actual = captured.out.lower().strip()
-        expected = "profit: $2,300.00"
-        assert expected == actual, f'Expected the calculate_profit() function to print "{expected}" when the user input the value, "{mock_data}"; instead, it printed "{actual}".'
+        inputs = ["3000", "10000"] # the mock values we will use for input
+        mock_values = inputs.copy()
+        expecteds = ["profit: $690.00", "profit: $2,300.00"]
+        monkeypatch.setattr("builtins.input", lambda x: inputs.pop(0))
+        for i in range(len(mock_values)):
+            mock_data = mock_values[i]
+            expected = expecteds[i]
+            calculate_profit()
+            captured = capsys.readouterr() # capture print output
+            actual = captured.out.lower().strip()
+            assert expected == actual, f'Expected the calculate_profit() function to print "{expected}" when the user input the value, "{mock_data}"; instead, it printed "{actual}".'
 
     def test_calculate_quotient_and_remainder(self, capsys, monkeypatch):
-        mock_values = ["5", "2"] # the mock values we will use for input
-        monkeypatch.setattr("builtins.input", lambda x: mock_values.pop(0))
+        inputs = ["5", "2"] # the mock values we will use for input
+        mock_values = inputs.copy()
+        monkeypatch.setattr("builtins.input", lambda x: inputs.pop(0))
         calculate_quotient_and_remainder()
         captured = capsys.readouterr() # capture print output
         actual = captured.out.lower().strip()
@@ -30,8 +27,9 @@ class Tests:
         assert expected == actual, f'Expected the calculate_quotient_and_remainder() function to print "{expected}" when the user input the values, {mock_values}; instead, it printed "{actual}".'
 
     def test_calculate_miles_per_gallon(self, capsys, monkeypatch):
-        mock_values = ["50", "2"] # the mock values we will use for input
-        monkeypatch.setattr("builtins.input", lambda x: mock_values.pop(0))
+        inputs = ["50", "2"] # the mock values we will use for input
+        mock_values = inputs.copy()
+        monkeypatch.setattr("builtins.input", lambda x: inputs.pop(0))
         calculate_miles_per_gallon()
         captured = capsys.readouterr() # capture print output
         actual = captured.out.lower().strip()
@@ -41,8 +39,9 @@ class Tests:
         assert expected in actual, f'Expected the printed output of the calculate_miles_per_gallon() function to include "{expected}" when the user input the values, {mock_values}; instead, it printed "{actual}".'
 
     def test_align_text(self, capsys, monkeypatch):
-        mock_values = ["1", "200", "50"] # the mock values we will use for input
-        monkeypatch.setattr("builtins.input", lambda x: mock_values.pop(0))
+        inputs = ["1", "200", "50"] # the mock values we will use for input
+        mock_values = inputs.copy()
+        monkeypatch.setattr("builtins.input", lambda x: inputs.pop(0))
         align_text()
         captured = capsys.readouterr() # capture print output
         expected = '''
@@ -54,5 +53,5 @@ Price #3: $   50.00
         ''' .lower().strip()
         expected = ' '.join(expected.split()) # remove multiple whitespaces
         actual = captured.out.lower().strip()
-        actual = ' '.join(expected.split())
+        actual = ' '.join(actual.split())
         assert expected == actual, f'Expected the align_text() function to print "{expected}" when the user input the values, {mock_values}; instead, it printed "{actual}".'
