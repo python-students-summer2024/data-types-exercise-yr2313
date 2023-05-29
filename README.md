@@ -36,10 +36,10 @@ A best practice is to focus on one problem at a time. Comment out any lines in t
 
 ### Verify the output is correct
 
-Running the program should ask for the user to input several words (adjectives, nouns, verbs, etc), and then generate and output the text of Lewis Carrol's Jabberwocky with those words inserted in Mad Lib style.
+Make sure that your program behaves as expected when you run it. Any requests for user input or printed output should match exactly the samples given in the instructions. Pay attention to details, such as the number of spaces, the number of newlines, the use of punctuation, etc.
 
 ### Verify that the tests pass
 
 Pytest-based tests are included in the `tests` directory that will help you determine whether each function is operating as expected. If the functions have been completed correctly, all tests should pass. You should not edit any files in the `test` directory.
 
-If the tests do not appear, or seem to never stop loading, open up a Terminal window and run the command, `pytest --collect-only`, to see whether there are any errors in the code that prevent the tests from being discovered. If there are no errors reported from that command, try running the tests directly from the Terminal with the command, `pytest`.
+If the tests do not appear, or seem to never stop loading, or you experience other problems with them, open up a Terminal window and run the command, `pytest --collect-only`, to see whether there are any errors in the code that prevent the tests from being discovered. If there are no errors reported from that command, try running the tests directly from the Terminal with the command, `pytest`.
