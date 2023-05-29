@@ -36,7 +36,7 @@ A best practice is to focus on one problem at a time. Comment out any lines in t
 
 ### Verify the output is correct
 
-Make sure that your program behaves as expected when you run it. Any requests for user input or printed output should match exactly the samples given in the instructions. Pay attention to details, such as the number of spaces, the number of newlines, the use of punctuation, etc.
+Make sure that your program behaves as expected when you run it. Review the requirements and compare your work to them. Any requests for user input or printed output should match exactly the samples given in the instructions. Pay attention to details, such as the number of spaces, the number of newlines, the use of punctuation, etc.
 
 ### Verify that the tests pass
 
