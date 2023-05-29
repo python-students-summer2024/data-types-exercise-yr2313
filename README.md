@@ -34,7 +34,7 @@ To run the program, run the file named `main.py`. The code in this file makes us
 
 A best practice is to focus on one problem at a time. Comment out any lines in the `main.py` program that run parts of the code you are not interested in trying out at the moment.
 
-### Verify the output is correct
+### Verify your program runs correctly
 
 Make sure that your program behaves as expected when you run it. Review the requirements and compare your work to them. Any requests for user input or printed output should match exactly the samples given in the instructions. Pay attention to details, such as the number of spaces, the number of newlines, the use of punctuation, etc.
 
